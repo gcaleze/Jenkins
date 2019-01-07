@@ -1,4 +1,10 @@
 package example;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -9,6 +15,21 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 public class NewTest {
 	private ExtentHtmlReporter reporter;
 	private ExtentReports extent;
+	public String baseUrl = "https://52.202.44.59:8181/sso4-portal/login";
+	String driverPath = "C:\\Selenium\\chromedriver.exe";
+	public WebDriver driver;
+	public String expected = null;
+	public String actual = null;
+
+	@BeforeClass // -------------------------------------------------------
+	public void launchBrowser() {
+		System.out.println("launching Chrome browser");
+		System.setProperty("webdriver.chrome.driver", driverPath);
+		driver = new ChromeDriver();
+		driver.get("https://www.google.com/");
+		System.out.println("1. launchBrowser");
+	}
+		
 @Test(priority = 0)
 public void test1(){
 	reporter = new ExtentHtmlReporter("./Reports/Report.html");
