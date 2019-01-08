@@ -16,7 +16,7 @@ public class NewTest {
 	private ExtentHtmlReporter reporter;
 	private ExtentReports extent;
 	public String baseUrl = "https://52.202.44.59:8181/sso4-portal/login";
-	//String driverPath = "C:\\Selenium\\chromedriver.exe";
+	String driverPath = "C:\\Selenium\\chromedriver.exe";
 	public WebDriver driver;
 	public String expected = null;
 	public String actual = null;
@@ -24,7 +24,7 @@ public class NewTest {
 	@BeforeClass // -------------------------------------------------------
 	public void launchBrowser() {
 		System.out.println("launching Chrome browser");
-		//System.setProperty("webdriver.chrome.driver", driverPath);
+		System.setProperty("webdriver.chrome.driver", driverPath);
 		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 		System.out.println("1. launchBrowser");
