@@ -24,7 +24,7 @@ public class NewTest {
 	@BeforeClass // -------------------------------------------------------
 	public void launchBrowser() {
 		System.out.println("launching Chrome browser");
-		System.setProperty("webdriver.chrome.driver", driverPath);
+		//System.setProperty("webdriver.chrome.driver", driverPath);
 		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 		System.out.println("1. launchBrowser");
