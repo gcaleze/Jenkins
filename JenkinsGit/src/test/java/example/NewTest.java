@@ -26,8 +26,8 @@ public class NewTest {
 
 	@BeforeClass // -------------------------------------------------------
 	public void launchBrowser() throws MalformedURLException {
-		System.out.println("launching Chrome browser");
-		System.setProperty("webdriver.chrome.driver", driverPath);
+//		System.out.println("launching Chrome browser");
+//		System.setProperty("webdriver.chrome.driver", driverPath);
 		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 //		WebDriver driver = new RemoteWebDriver(new URL("http://34.204.52.158:8080"), DesiredCapabilities.chrome());
