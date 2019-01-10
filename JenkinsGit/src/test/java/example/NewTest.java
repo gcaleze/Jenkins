@@ -19,19 +19,19 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 public class NewTest {
 	private ExtentHtmlReporter reporter;
 	private ExtentReports extent;
-	String driverPath = "C:\\Selenium\\chromedriver.exe";
+	String driverPath = "\\var\\Drivers\\chromedriver.exe";
 	public WebDriver driver;
 	public String expected = null;
 	public String actual = null;
 
 	@BeforeClass // -------------------------------------------------------
 	public void launchBrowser() throws MalformedURLException {
-//		System.out.println("launching Chrome browser");
-//		System.setProperty("webdriver.chrome.driver", driverPath);
-//		driver = new ChromeDriver();
-//		driver.get("https://www.google.com/");
-		WebDriver driver = new RemoteWebDriver(new URL("http://34.204.52.158:8080"), DesiredCapabilities.chrome());
-		driver.get("http://www.google.com");
+		System.out.println("launching Chrome browser");
+		System.setProperty("webdriver.chrome.driver", driverPath);
+		driver = new ChromeDriver();
+	driver.get("https://www.google.com/");
+//		WebDriver driver = new RemoteWebDriver(new URL("http://34.204.52.158:8080"), DesiredCapabilities.chrome());
+//		driver.get("http://www.google.com");
 //		DesiredCapabilities capability = DesiredCapabilities.chrome();
 //		driver = new RemoteWebDriver(new URL("http://34.204.52.158:8080"), capability);
 //		driver.get("https://www.google.com/");
