@@ -19,7 +19,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 public class NewTest {
 	private ExtentHtmlReporter reporter;
 	private ExtentReports extent;
-	String driverPath = "\\var\\Drivers\\chromedriver.exe";
+	String driverPath = "/usr/bin/chromedriver";
 	public WebDriver driver;
 	public String expected = null;
 	public String actual = null;
@@ -29,7 +29,7 @@ public class NewTest {
 		System.out.println("launching Chrome browser");
 		System.setProperty("webdriver.chrome.driver", driverPath);
 		driver = new ChromeDriver();
-	driver.get("https://www.google.com/");
+		driver.get("https://www.google.com/");
 //		WebDriver driver = new RemoteWebDriver(new URL("http://34.204.52.158:8080"), DesiredCapabilities.chrome());
 //		driver.get("http://www.google.com");
 //		DesiredCapabilities capability = DesiredCapabilities.chrome();
