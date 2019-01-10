@@ -30,9 +30,8 @@ public class NewTest {
 //		System.setProperty("webdriver.chrome.driver", driverPath);
 //		driver = new ChromeDriver();
 //		driver.get("https://www.google.com/");
-		DesiredCapabilities capability = DesiredCapabilities.chrome();
-		driver = new RemoteWebDriver(new URL("http://34.204.52.158:8080"), capability);
-		driver.get("https://www.google.com/");
+		WebDriver driver = new RemoteWebDriver(DesiredCapabilities.chrome());
+		driver.get("http://www.google.com");
 //		String page = driver.getPageSource();
 	}
 
