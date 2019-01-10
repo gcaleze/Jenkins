@@ -1,12 +1,16 @@
 package example;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
+import org.openqa.selenium.remote.RemoteWebDriver;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -21,12 +25,16 @@ public class NewTest {
 	public String actual = null;
 
 	@BeforeClass // -------------------------------------------------------
-	public void launchBrowser() {
-		System.out.println("launching Chrome browser");
-		System.setProperty("webdriver.chrome.driver", driverPath);
-		driver = new ChromeDriver();
+	public void launchBrowser() throws MalformedURLException {
+//		System.out.println("launching Chrome browser");
+//		System.setProperty("webdriver.chrome.driver", driverPath);
+//		driver = new ChromeDriver();
+//		driver.get("https://www.google.com/");
+//		System.out.println("1. launchBrowser");
+		DesiredCapabilities capability = DesiredCapabilities.chrome();
+		driver = new RemoteWebDriver(new URL("http://34.204.52.158:8080/wd/hub"), capability);
 		driver.get("https://www.google.com/");
-		System.out.println("1. launchBrowser");
+		String page = driver.getPageSource();
 	}
 
 	@Test(priority = 1)
