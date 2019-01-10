@@ -15,7 +15,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 public class NewTest {
 	private ExtentHtmlReporter reporter;
 	private ExtentReports extent;
-	String driverPath = "chromedriver.exe";
+	String driverPath = "chromedriver";
 	public WebDriver driver;
 	public String expected = null;
 	public String actual = null;
