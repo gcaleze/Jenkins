@@ -15,7 +15,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 public class NewTest {
 	private ExtentHtmlReporter reporter;
 	private ExtentReports extent;
-	String driverPath = "C:\\Selenium\\chromedriver.exe";
+	String driverPath = "chromedriver.exe";
 	public WebDriver driver;
 	public String expected = null;
 	public String actual = null;
