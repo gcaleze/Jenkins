@@ -20,7 +20,8 @@ public class NewTest {
 	private ExtentHtmlReporter reporter;
 	private ExtentReports extent;
 	//String driverPath = "/usr/bin/chromedriver";
-	String driverPath = "C:\\Selenium\\chromedriver.exe";
+	//String driverPath = "C:\\Selenium\\chromedriver.exe";
+	String driverPath = "/var/lib/jenkins/workspace/SQA Test/JenkinsGit/chromedriver.exe";
 	public WebDriver driver;
 	public String expected = null;
 	public String actual = null;
