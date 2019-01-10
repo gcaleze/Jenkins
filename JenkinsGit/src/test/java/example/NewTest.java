@@ -21,7 +21,7 @@ public class NewTest {
 	private ExtentReports extent;
 	//String driverPath = "/usr/bin/chromedriver";
 	//String driverPath = "C:\\Selenium\\chromedriver.exe";
-	String driverPath = "/var/lib/jenkins/workspace/SQA Test/JenkinsGit/chromedriver";
+	//String driverPath = "/var/lib/jenkins/workspace/SQA Test/JenkinsGit/chromedriver";
 	public WebDriver driver;
 	public String expected = null;
 	public String actual = null;
@@ -29,7 +29,7 @@ public class NewTest {
 	@BeforeClass // -------------------------------------------------------
 	public void launchBrowser(){
 //		System.out.println("launching Chrome browser");
-		System.setProperty("webdriver.chrome.driver", driverPath);
+//		System.setProperty("webdriver.chrome.driver", driverPath);
 		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 //		WebDriver driver = new RemoteWebDriver(new URL("http://34.204.52.158:8080"), DesiredCapabilities.chrome());
