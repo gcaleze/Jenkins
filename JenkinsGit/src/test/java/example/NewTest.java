@@ -26,7 +26,6 @@ public class NewTest {
 	public String expected = null;
 	public String actual = null;
 	//String driverPath = "/var/lib/jenkins/workspace/SQA Test/JenkinsGit/chromedriver";
-	String driverPath = "/usr/bin/chromedriver";
 	public WebDriver driver;
 
 	@BeforeClass // -------------------------------------------------------
