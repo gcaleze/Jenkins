@@ -31,7 +31,7 @@ public class NewTest {
 
 	@BeforeClass // -------------------------------------------------------
 	public void launchBrowser(){
-		System.setProperty("webdriver.chrome.driver", driverPath);
+		//System.setProperty("webdriver.chrome.driver", driverPath);
 		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 	}
