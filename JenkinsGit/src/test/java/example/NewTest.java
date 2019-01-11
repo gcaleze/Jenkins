@@ -25,12 +25,12 @@ public class NewTest {
 	
 	public String expected = null;
 	public String actual = null;
-	//String driverPath = "/var/lib/jenkins/workspace/SQA Test/JenkinsGit/chromedriver";
+	String driverPath = "C:\\Selenium\\chromedriver.exe";
 	public WebDriver driver;
 
 	@BeforeClass // -------------------------------------------------------
 	public void launchBrowser(){
-		//System.setProperty("webdriver.chrome.driver", driverPath);
+		System.setProperty("webdriver.chrome.driver", driverPath);
 		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 	}
