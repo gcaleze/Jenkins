@@ -8,7 +8,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
-import mainSample.base;
+import sample.base;
 
 public class NewTest extends base {
 	private ExtentHtmlReporter reporter;
