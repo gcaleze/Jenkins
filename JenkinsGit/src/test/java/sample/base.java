@@ -20,7 +20,9 @@ public class base {
 //		System.setProperty("webdriver.chrome.driver", driverPath);
 //		driver = new ChromeDriver();
 //		driver.get("https://www.google.com/");
-        WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
+
+		DesiredCapabilities capability = DesiredCapabilities.chrome();
+        WebDriver driver = new RemoteWebDriver(new URL("http://192.168.125.97:4444/wd/hub"), capability);
 		driver.get("http://www.google.com");
 	}
 
