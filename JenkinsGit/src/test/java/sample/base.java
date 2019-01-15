@@ -17,17 +17,15 @@ public class base {
 
 	@BeforeClass
 	public void launchBrowser() throws Exception {
-//		locateDriver();
-//		System.setProperty("webdriver.chrome.driver", driverPath);
-//		driver = new ChromeDriver();
-//		driver.get("https://www.google.com/");
+		locateDriver();
+		System.setProperty("webdriver.chrome.driver", driverPath);
+		driver = new ChromeDriver();
+		driver.get("https://www.google.com/");
 		
-//		ChromeOptions chromeOptions = new ChromeOptions();
-//		DesiredCapabilities capability = new DesiredCapabilities(chromeOptions);
-		DesiredCapabilities capability = new DesiredCapabilities();
-		capability.setBrowserName("chrome");
-        WebDriver driver = new RemoteWebDriver(new URL("http://192.168.125.97:4444/wd/hub"), capability);
-		driver.get("https://www.google.com");
+//		DesiredCapabilities capability = new DesiredCapabilities();
+//		capability.setBrowserName("chrome");
+//        WebDriver driver = new RemoteWebDriver(new URL("http://192.168.125.97:4444/wd/hub"), capability);
+//		driver.get("https://www.google.com");
 	}
 
 	public void locateDriver() {
