@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="8619" started-at="2019-01-15T08:01:46Z" finished-at="2019-01-15T08:01:55Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="8619" started-at="2019-01-15T08:01:46Z" finished-at="2019-01-15T08:01:55Z">
+      <class name="example.NewTest">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:example.NewTest@4dfa3a9d]" name="launchBrowser" is-config="true" duration-ms="7156" started-at="2019-01-15T08:01:46Z" finished-at="2019-01-15T08:01:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="test1()[pri:1, instance:example.NewTest@4dfa3a9d]" name="test1" duration-ms="1173" started-at="2019-01-15T08:01:54Z" finished-at="2019-01-15T08:01:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="test2()[pri:2, instance:example.NewTest@4dfa3a9d]" name="test2" duration-ms="235" started-at="2019-01-15T08:01:55Z" finished-at="2019-01-15T08:01:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="test3()[pri:3, instance:example.NewTest@4dfa3a9d]" name="test3" duration-ms="41" started-at="2019-01-15T08:01:55Z" finished-at="2019-01-15T08:01:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+      </class> <!-- example.NewTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

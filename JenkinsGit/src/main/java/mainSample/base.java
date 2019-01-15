@@ -3,15 +3,14 @@ package mainSample;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 
 public class base {
-	String driverPath;
+	String driverPath = "C:\\Selenium\\chromedriver.exe";
+	//String driverPath = "/usr/bin/chromedriver";	
 	public WebDriver driver;
 
 	@BeforeClass
 	public void launchBrowser(){
-		locateChromeDriver();
 		System.setProperty("webdriver.chrome.driver", driverPath);
 		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
@@ -19,12 +18,8 @@ public class base {
 		System.out.println(OS);
 	}
 	
-	public void locateChromeDriver(){
-		String OS = System.getProperty("os.name");
-		if (OS.equals("Windows 7")){
-			driverPath = "C:\\Selenium\\chromedriver.exe";
-		}else {
-			driverPath = "/usr/bin/chromedriver";
-		}
-	}
+//	public String checkOS(){
+//		String OS = System.getProperty("os.name");
+//		return OS;
+//	}
 }

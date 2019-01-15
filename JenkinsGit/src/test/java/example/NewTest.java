@@ -1,47 +1,22 @@
 package example;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
-public class NewTest {
+import mainSample.base;
+
+public class NewTest extends base {
 	private ExtentHtmlReporter reporter;
 	private ExtentReports extent;
-	//String driverPath = "/usr/bin/chromedriver";
-	
-	//String driverPath = "/var/lib/jenkins/workspace/SQA Test/JenkinsGit/chromedriver";
-	
 	public String expected = null;
 	public String actual = null;
-	String driverPath = "C:\\Selenium\\chromedriver.exe";
-	public WebDriver driver;
 
-	@BeforeClass // -------------------------------------------------------
-	public void launchBrowser(){
-		System.setProperty("webdriver.chrome.driver", driverPath);
-		driver = new ChromeDriver();
-		driver.get("https://www.google.com/");
-	}
 	
-//	WebDriver driver = new RemoteWebDriver(new URL("http://34.204.52.158:8080"), DesiredCapabilities.chrome());
-//	driver.get("http://www.google.com");
-//	DesiredCapabilities capability = DesiredCapabilities.chrome();
-//	driver = new RemoteWebDriver(new URL("http://34.204.52.158:8080"), capability);
-//	driver.get("https://www.google.com/");
-//	String page = driver.getPageSource();
-
 	@Test(priority = 1)
 	public void test1() {
 		driver.findElement(By.xpath("//input[@title='Search']")).sendKeys("qwerty");
