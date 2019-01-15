@@ -1,19 +1,27 @@
 package sample;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeClass;
+import org.openqa.selenium.remote.Augmenter;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class base {
 	String driverPath;
 	public WebDriver driver;
 
 	@BeforeClass
-	public void launchBrowser() {
-		locateDriver();
-		System.setProperty("webdriver.chrome.driver", driverPath);
-		driver = new ChromeDriver();
-		driver.get("https://www.google.com/");
+	public void launchBrowser() throws Exception {
+//		locateDriver();
+//		System.setProperty("webdriver.chrome.driver", driverPath);
+//		driver = new ChromeDriver();
+//		driver.get("https://www.google.com/");
+        WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
+		driver.get("http://www.google.com");
 	}
 
 	public void locateDriver() {
