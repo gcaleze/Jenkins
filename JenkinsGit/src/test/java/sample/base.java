@@ -14,8 +14,6 @@ public class base {
 		System.setProperty("webdriver.chrome.driver", driverPath);
 		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
-		String OS = System.getProperty("os.name");
-		System.out.println(OS);
 	}
 
 	public void locateDriver() {
