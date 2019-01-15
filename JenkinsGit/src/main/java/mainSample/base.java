@@ -20,9 +20,12 @@ public class base {
 
 	public void locateDriver() {
 		String OS = System.getProperty("os.name");
+		System.out.println("locateDriver()");
 		if (OS.equals("Windows 7")) {
 			driverPath = "C:\\Selenium\\chromedriver.exe";
+			System.out.println("Windows 7");
 		} else {
+			System.out.println("Other OS");
 			driverPath = "/usr/bin/chromedriver";
 		}
 	}
