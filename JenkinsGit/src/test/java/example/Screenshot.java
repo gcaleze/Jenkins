@@ -15,10 +15,10 @@ public class Screenshot extends example.base {
 		String destination = "";
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		if (OS.equals("Windows 7")) {
-			destination = System.getProperty("user.dir") + "\\Screenshots\\" + fileName + ".png";
+			destination = System.getProperty("user.dir") + "\\Reports\\Screenshots\\" + fileName + ".png";
 			System.out.println(OS);
 		} else {
-			destination = System.getProperty("user.dir") + "/Screenshots/" + fileName + ".png";
+			destination = System.getProperty("user.dir") + "/Reports/Screenshots/" + fileName + ".png";
 			System.out.println(OS);
 		}
 		File srcFile = ts.getScreenshotAs(OutputType.FILE);

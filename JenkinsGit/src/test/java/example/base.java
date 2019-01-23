@@ -36,7 +36,7 @@ public class base {
 		//reporter.setAppendExisting(true);
 		reports.attachReporter(reporter);		
 		reporter.loadXMLConfig(xmlConfig);
-		reports.setSystemInfo("OS", "Win 7");
+		//reports.setSystemInfo("OS", "Win 7");
 		reports.setSystemInfo("Tester", testerName);
 		
 		System.setProperty("webdriver.chrome.driver",driverPath);
