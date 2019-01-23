@@ -1,34 +1,39 @@
 package example;
 
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-
-import sample.base;
 
 public class NewTest extends base {
-	private ExtentHtmlReporter reporter;
-	private ExtentReports extent;
+
 	public String expected = null;
 	public String actual = null;
 
+	@Test (priority = 1)
+	public void verifyTitle() throws InterruptedException {
+		logger = reports.createTest("Verify Title");
+		String expectedTitle = "Google";		
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		driver.get("https://www.google.com/");		
+		Thread.sleep(1000);		
+		Assert.assertEquals(driver.getTitle(), expectedTitle);
+	}
 	
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void test1() {
+		logger = reports.createTest("Search");
 		driver.findElement(By.xpath("//input[@title='Search']")).sendKeys("qwerty");
 		driver.findElement(By.xpath("//input[@title='Search']")).sendKeys(Keys.RETURN);
 	}
 
-	@Test(priority = 2)
-	public void test2() {
-		reporter = new ExtentHtmlReporter("./Reports/Report.html");
-		extent = new ExtentReports();
-		extent.attachReporter(reporter);
-		ExtentTest logger = extent.createTest("sampleGenReports");
+	@Test(priority = 3)
+	public void test2() throws IOException {
+		logger = reports.createTest("sample Gen Reports1");
 		logger.log(Status.INFO, "Info 1");
 		logger.log(Status.PASS, "Pass 2");
 		logger.log(Status.DEBUG, "Debug 3");
@@ -45,31 +50,34 @@ public class NewTest extends base {
 		logger.pass("Pass 13");
 		logger.skip("Skip 14");
 		logger.warning("Warning 15");
-		extent.flush();
 		System.out.println("1.1");
+		String imgPath = Screenshot.capture(driver, "test_"+ "1st");
+		System.out.println(imgPath+"        =================================");
+		logger.log(Status.FAIL, "image below: " + logger.addScreenCaptureFromPath(imgPath));
 	}
 
-	@Test(priority = 3)
-	public void test3() {
-		ExtentTest logger2 = extent.createTest("sample Gen Reports");
-		logger2.log(Status.INFO, "Info 1.1");
-		logger2.log(Status.PASS, "Pass 2.1");
-		logger2.log(Status.DEBUG, "Debug 3.1");
-		logger2.log(Status.ERROR, "Error 4.1");
-		logger2.log(Status.FAIL, "Fail 5.1");
-		logger2.log(Status.SKIP, "Skip 6.1");
-		logger2.log(Status.WARNING, "Warning 7.1");
-		logger2.log(Status.FATAL, "Fatal 7.5.1");
-		logger2.debug("Debug 8.1");
-		logger2.error("Error 9.1");
-		logger2.fail("Fail 10.1");
-		logger2.fatal("Fatal 11.1");
-		logger2.info("Info 12.1");
-		logger2.pass("Pass 13.1");
-		logger2.skip("Skip 14.1");
-		logger2.warning("Warning 15.1");
-
-		extent.flush();
+	@Test(priority = 4)
+	public void test3() throws IOException {
+		logger = reports.createTest("sample Gen Reports2");
+		logger.log(Status.INFO, "Info 1.1");
+		logger.log(Status.PASS, "Pass 2.1");
+		logger.log(Status.DEBUG, "Debug 3.1");
+		logger.log(Status.ERROR, "Error 4.1");
+		logger.log(Status.FAIL, "Fail 5.1");
+		logger.log(Status.SKIP, "Skip 6.1");
+		logger.log(Status.WARNING, "Warning 7.1");
+		logger.log(Status.FATAL, "Fatal 7.5.1");
+		logger.debug("Debug 8.1");
+		logger.error("Error 9.1");
+		logger.fail("Fail 10.1");
+		logger.fatal("Fatal 11.1");
+		logger.info("Info 12.1");
+		logger.pass("Pass 13.1");
+		logger.skip("Skip 14.1");
+		logger.warning("Warning 15.1");
 		System.out.println("2.1");
+		String imgPath = Screenshot.capture(driver, "test_"+ "2nd");
+		System.out.println(imgPath+"        =================================");
+		logger.log(Status.FAIL, "image below: " + logger.addScreenCaptureFromPath(imgPath));
 	}
 }
