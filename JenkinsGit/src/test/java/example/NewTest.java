@@ -53,7 +53,7 @@ public class NewTest extends base {
 		System.out.println("1.1");
 		String imgPath = Screenshot.capture(driver, "test_"+ "1st");
 		System.out.println(imgPath+"        =================================");
-		logger.log(Status.FAIL, "image below: " + logger.addScreenCaptureFromPath("/test_" + "1st" + ".png"));
+		logger.log(Status.FAIL, "image below: " + logger.addScreenCaptureFromPath("test_" + "1st" + ".png"));
 	}
 
 	@Test(priority = 4)
@@ -78,6 +78,6 @@ public class NewTest extends base {
 		System.out.println("2.1");
 		String imgPath = Screenshot.capture(driver, "test_"+ "2nd");
 		System.out.println(imgPath+"        =================================");
-		logger.log(Status.FAIL, "image below: " + logger.addScreenCaptureFromPath("/test_" + "2nd" + ".png"));
+		logger.log(Status.FAIL, "image below: " + logger.addScreenCaptureFromPath("test_" + "2nd" + ".png"));
 	}
 }
