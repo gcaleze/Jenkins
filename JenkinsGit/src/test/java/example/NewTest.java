@@ -27,7 +27,7 @@ public class NewTest extends base {
 	@Test(priority = 2)
 	public void test1() {
 		logger = reports.createTest("Search");
-		driver.findElement(By.xpath("//input[@title='Search']")).sendKeys("qwerty");
+		driver.findElement(By.xpath("//input[@title='Search']")).sendKeys("asdfjkl;");
 		driver.findElement(By.xpath("//input[@title='Search']")).sendKeys(Keys.RETURN);
 	}
 
