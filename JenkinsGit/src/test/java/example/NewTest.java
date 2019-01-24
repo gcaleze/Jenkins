@@ -51,8 +51,7 @@ public class NewTest extends base {
 		logger.skip("Skip 14");
 		logger.warning("Warning 15");
 		System.out.println("1.1");
-		String imgPath = Screenshot.capture(driver, "test_"+ "1st");
-		System.out.println(imgPath+"        =================================");
+		Screenshot.capture(driver, "test_"+ "1st");
 		//logger.log(Status.FAIL, "image below: " + logger.addScreenCaptureFromPath("/job/SQA%20Test/ws/JenkinsGit/Reports/Screenshots/test_1st.png"));
 		logger.log(Status.FAIL, "image below: " + logger.addScreenCaptureFromPath("Screenshots/test_1st.png"));
 	}
@@ -77,9 +76,7 @@ public class NewTest extends base {
 		logger.skip("Skip 14.1");
 		logger.warning("Warning 15.1");
 		System.out.println("2.1");
-		String imgPath = Screenshot.capture(driver, "test_"+ "2nd");
-		System.out.println(imgPath+"        =================================");
-		//logger.log(Status.FAIL, "image below: " + logger.addScreenCaptureFromPath("/job/SQA%20Test/ws/JenkinsGit/Reports/Screenshots/test_2nd.png"));
+		Screenshot.capture(driver, "test_"+ "2nd");;
 		logger.log(Status.FAIL, "image below: " + logger.addScreenCaptureFromPath("Screenshots/test_2nd.png"));
 	}
 }
