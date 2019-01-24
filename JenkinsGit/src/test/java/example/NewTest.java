@@ -54,7 +54,7 @@ public class NewTest extends base {
 		String imgPath = Screenshot.capture(driver, "test_"+ "1st");
 		System.out.println(imgPath+"        =================================");
 		//logger.log(Status.FAIL, "image below: " + logger.addScreenCaptureFromPath("/job/SQA%20Test/ws/JenkinsGit/Reports/Screenshots/test_1st.png"));
-		logger.log(Status.FAIL, "image below: " + logger.addScreenCaptureFromPath("/Screenshots/test_1st.png"));
+		logger.log(Status.FAIL, "image below: " + logger.addScreenCaptureFromPath("Screenshots/test_1st.png"));
 	}
 
 	@Test(priority = 4)
@@ -80,6 +80,6 @@ public class NewTest extends base {
 		String imgPath = Screenshot.capture(driver, "test_"+ "2nd");
 		System.out.println(imgPath+"        =================================");
 		//logger.log(Status.FAIL, "image below: " + logger.addScreenCaptureFromPath("/job/SQA%20Test/ws/JenkinsGit/Reports/Screenshots/test_2nd.png"));
-		logger.log(Status.FAIL, "image below: " + logger.addScreenCaptureFromPath("/Screenshots/test_2nd.png"));
+		logger.log(Status.FAIL, "image below: " + logger.addScreenCaptureFromPath("Screenshots/test_2nd.png"));
 	}
 }
